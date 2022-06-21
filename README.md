@@ -56,181 +56,324 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#visualisasi-data-kondisi-ketenagakerjaan-di-indonesia-selama-pandemi-covid-19-berbasis-web-dan-embed-dashboard-tableau">About The Project</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#link-project">Link Project</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#website">Website</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#konsep-dan-definisi">Konsep dan Definisi</a></li>
+        <li><a href="#visualisasi">Visualisasi</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li>
+      <a href="#dashboard">Dashboard</a>
+      <ul>
+        <li><a href="#preprocessing-data">Preprocessing Data</a></li>
+        <li><a href="#visualisasi-line-chart">Visualisasi Line Chart</a></li>
+        <li><a href="#visualisasi-peta-tematik">Visualisasi Peta Tematik</a></li>
+        <li><a href="#tampilan-dashboard">Tampilan Dashboard</a></li>
+        <li><a href="#tableau-public">Tableau Public</a></li>
+        <li><a href="#embed-to-website">Embed to Website</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#contact">Contact</a>
+    </li>
   </ol>
 </details>
 
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## Visualisasi Data Kondisi Ketenagakerjaan di Indonesia Selama Pandemi Covid-19 Berbasis Web dan Embed Dashboard Tableau
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<p align="center"><img src="images/web-home.png" alt="Logo" width="750"></p>
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+Project ini menjelaskan tentang bagaimana cara membangun dashboard visualisasi data dinamis dengan menggunakan Tableau dan cara menanamkan (_embed_) dashboard tersebut ke dalam website yang telah dibangun. Data yang akan divisualisasikan adalah data Kondisi Ketenagakerjaan di Indonesia Selama Pandemi COVID-19 yang bersumber dari publikasi BPS yaitu [Indikator Kesejahteraan Rakyat 2021](https://www.bps.go.id/publication/2021/11/30/d34268e041d8bec0b25ba344/indikator-kesejahteraan-rakyat-2021.html#:~:text=Indikator%20Kesejahteraan%20Rakyat%202021%20merupakan,tinggal%20(perkotaan%20dan%20perdesaan).).
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
+### Link Project
 
-Use the `BLANK_README.md` to get started.
+Berikut adalah link menuju website dan tableau publik yang telah dibangun.
+
+* Website : [Kondisi Ketenagakerjaan di Indonesia Selama Pandemi](https://dindafahrani.github.io/)
+* [Tableau Public](https://public.tableau.com/views/KondisiKetenagakerjaanIndonesiaSelamaCOVID-19/KondisiKetenagakerjaanIndonesiaPadaMasaPandemiCOVID-19?:language=en-US&:display_count=n&:origin=viz_share_link)
+
+Selanjutnya akan dijelaskan mengenai proses pembuatan website dan dashboard visualisasi data
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
-### Built With
+<!-- WEBSITE -->
+## Website
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+Website yang telah dibuat berjudul "Kondisi Ketenagakerjaan Indonesia Selama Pandemi COVID-19" ini merupakan website yang bertujuan untuk menampilkan visualisasi dinamis dari hasil publikasi BPS. Website ini terdiri dari 3 halaman web yakni halaman [Home](https://dindafahrani.github.io/index.html), [Konsep dan Definisi](https://dindafahrani.github.io/konteks.html), dan [Visualisasi](https://dindafahrani.github.io/visual.html)
 
-* [Next.js](https://nextjs.org/)
-* [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
+Setiap halaman dalam website, terdapat section `header` dan `footer`. Pada section `header` terdapat judul website dan ikon navigasi `Home`, `Konsep dan Definisi`, dan `Visualisasi` yang mengarahkan user kepada halaman yang dituju. Sedangkan pada section `footer`, terdapat copyright html.
+
+Link menuju repository web : https://github.com/DindaFahrani/DindaFahrani.github.io 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
-<!-- GETTING STARTED -->
-## Getting Started
+### Home
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Pada halaman [Home](https://dindafahrani.github.io/index.html), terdapat 3 section, yaitu section `Sumber Data`, `Konsep dan Definisi`, dan `Visualisasi`.
 
-### Prerequisites
+* Section `Sumber Data` terdapat ikon `Pelajari Lebih Lanjut` yang apabila di klik maka akan menghubungkan user pada halaman resmi BPS tentang publikasi [Indikator Kesejahteraan Rakyat 2021](https://www.bps.go.id/publication/2021/11/30/d34268e041d8bec0b25ba344/indikator-kesejahteraan-rakyat-2021.html#:~:text=Indikator%20Kesejahteraan%20Rakyat%202021%20merupakan,tinggal%20(perkotaan%20dan%20perdesaan).)
+* Section `Konsep dan Definisi` terdapat ikon `More` yang apabila di klik maka akan menghubungkan user pada halaman [Konsep dan Definisi](https://dindafahrani.github.io/konteks.html)
+* Section `Visualisasi` terdapat ikon `More` yang apabila di klik maka akan menghubungkan user pada halaman [Visualisasi](https://dindafahrani.github.io/visual.html)
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+<p align="center"><img src="images/web-home.png" alt="Logo" width="750"></p>
+<p align="center"><img src="images/home-kondef.png" alt="Logo" width="750"></p>
+<p align="center"><img src="images/home-visdat.png" alt="Logo" width="750"></p>
 
-### Installation
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+### Konsep dan Definisi
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+Halaman ini terdiri dari penjelasan mengenai sumber data yang digunakan dan juga konsep definisi variabel yang akan divisualisasikan
+
+<p align="center"><img src="images/kondef-1.png" alt="Logo" width="750"></p>
+<p align="center"><img src="images/kondef-2.png" alt="Logo" width="750"></p>
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+### Visualisasi
+
+Halaman ini terdiri dari dashboard visualisasi data dinamis yang ditanamkan dari [Tabelau Public](https://public.tableau.com/views/KondisiKetenagakerjaanIndonesiaSelamaCOVID-19/KondisiKetenagakerjaanIndonesiaPadaMasaPandemiCOVID-19?:language=en-US&:display_count=n&:origin=viz_share_link)
+
+<p align="center"><img src="images/visdat-1.png" alt="Logo" width="750"></p>
+<p align="center"><img src="images/visdat-2.png" alt="Logo" width="750"></p>
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- Dashboard -->
+## Dashboard
+
+Dashboard visualisasi data ini dibangun menggunakan Tableau, yang kemudian di simpan pada tableau public dan di tanamkan pada halaman website.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
-<!-- USAGE EXAMPLES -->
-## Usage
+### Preprocessing Data
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Data yang akan divisualisasikan pada Tableau bersumber dari publikasi BPS yang berjudul Indikator Kesejahteraan Rakyat 2021. Pada publikasi tahun 2021 tersebut, BPS mengangkat tema mengenai kondisi ketenagakerjaan di Indonesia selama masa pandemi COVID-19 dengan melihat pada 3 dimensi, yaitu kesempatan kerja, kualitas pekerjaan, dan kompensasi tenaga kerja. Selanjutnya setiap dimensi tersebut akan dihitung indeks pada masing-masing dimensi. Perhitungan tersebut didasarkan atas indikator-indikator penyusunnya. Pada publikasi ini, tersedia data mengenai nilai indeks dan indikatornya, baik di level Indonesia, maupun di level provinsi. Selain itu, terdapat 4 referensi waktu yang dipakai pada publikasi tersebut, yaitu Agustus 2019, Februari 2020, Agustus 2020, dan Februari 2021. Referensi waktu ini menggambarkan periode waktu selama pandemi COVID-19. Berikut ditampilkan tabel dimensi dan indikator penyusunnya :
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+<p align="center"><img src="images/indikator.png" alt="Logo" width="500"></p>
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+Berdasarkan data yang tersedia, disusunlah data dalam file excel DATA1.xlsx. Didalamnya terdapat beberapa sheet, yaitu sheet yang berisi data nilai indeks dan indikator di 34 provinsi di Indonesia, dan sheet yang berisi data nilai indeks dan indikator di 34 Provinsi.
 
+Berikut adalah data mengenai nilai indeks dan indikator di Indonesia dan periodenya :
 
+<p align="center"><img src="images/indonesia.png" alt="Logo" width="750"></p>
 
-<!-- ROADMAP -->
-## Roadmap
+Berikut adalah data mengenai nilai indeks dan indikator di 34 Provinsi di Indonesia berdasarkan periode :
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
+<p align="center"><img src="images/provinsi.png" alt="Logo" width="750"></p>
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+Untuk lebih lengkapnya, bisa dilihat pada file DATA1.xlsx.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+Selanjutnya file excel tersebut menjadi input pada workbook tableau. Logic yang digunakan adalah sebagai berikut :
 
+<p align="center"><img src="images/logic.png" alt="Logo" width="750"></p>
 
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+Untuk kolom `Provinsi` geographyc role diubah menjadi state/province.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
-<!-- LICENSE -->
-## License
+### Visualisasi Line Chart
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Visualisasi line chart ini digunakan untuk memvisualisasikan data indeks dan indikator di Indonesia berdasarkan periode waktu referensi. 
+
+Berikut adalah hasil pembentukan line chart pada tableau :
+
+* Worksheet LINE1 merupakan visualisasi Kondisi Ketenagakerjaan di Indonesia berdasarkan Indeks Tahun 2019-2021.
+
+<p align="center"><img src="images/line1.png" alt="Logo" width="750"></p>
+
+* Worksheet LINE2 merupakan visualisasi Kondisi Ketenagakerjaan di Indonesia berdasarkan Indikator Penyusun Indeks Tahun 2019-2021.
+
+<p align="center"><img src="images/line2.png" alt="Logo" width="750"></p>
+
+Visualisasi data ini dibuat dinamis, sehingga pengguna dapat menentukan indeks/indikator yang ingin ditampilkan. Untuk dapat melakukan aksi tersebut, langkahnya adalah dengan membuat parameter baru sebagai berikut :
+
+<p align="center"><img src="images/pilih-indeks.png" alt="Logo" width="300">
+<p align="center"><img src="images/pilih-indikator.png" alt="Logo" width="300">
+
+Selanjutnya tampilkan parameter. Untuk bisa melaukan aksi seperti apabila di klik maka muncul visualisasi data yang diinginkan maka kita melakukan Create Calculate Field dengan code sebagai berikut :
+
+* Pilih Indeks
+```
+CASE [Pilih Indeks]
+  WHEN "Indeks Kesempatan Kerja" THEN [Indeks Kesempatan Kerja (INDONESIA)]
+  WHEN "Indeks Kualitas Pekerjaan" THEN [Indeks Kualitas Pekerjaan (INDONESIA)]
+  WHEN "Indeks Kompensasi Tenaga Kerja" THEN [Indeks Kompensasi Tenaga Kerja (INDONESIA)]
+END
+```
+
+* Pilih Indikator
+```
+CASE [Pilih Indikator]
+WHEN "Tingkat Partisipasi Angkatan Kerja (TPAK)" THEN [Tingkat Partisipasi Angkatan Kerja (TPAK) (INDONESIA)]
+WHEN "Tingkat Kesempatan Kerja (TKK)" THEN [Tingkat Kesempatan Kerja (TKK) (INDONESIA)]
+WHEN "Rasio Penduduk Bekerja Terhadap Penduduk Usia Kerja" THEN [Rasio Penduduk Bekerja Terhadap Penduduk Usia Kerja (INDONESIA)]
+WHEN "Persentase Pekerja Sektor Industri" THEN [Persentase Pekerja Sektor Industri (INDONESIA)]
+WHEN "Persentase Pekerja Full Time" THEN [Persentase Pekerja Full Time (INDONESIA)]
+WHEN "Persentase Pekerja dengan Jam Kerja Normal (35-48 Jam Seminggu)" THEN [Persentase Pekerja dengan Jam Kerja Normal (35-48 Jam Seminggu) (INDONESIA)]
+WHEN "Persentase Pekerja Formal" THEN [Persentase Pekerja Formal (INDONESIA)]
+WHEN "Rata-Rata Upah Pekerja/ Buruh/Karyawan (Ribu Rupiah)" THEN [Rata-Rata Upah Pekerja/ Buruh/Karyawan (Ribu Rupiah) (INDONESIA)]
+WHEN "Rata-Rata Pendapatan Penduduk yang Berusaha Sendiri (Ribu Rupiah)" THEN [Rata-Rata Pendapatan Penduduk yang Berusaha Sendiri (Ribu Rupiah) (INDONESIA)]
+WHEN "Rata-Rata Pendapatan Pekerja Bebas (Ribu Rupiah)" THEN [Rata-Rata Pendapatan Pekerja Bebas (Ribu Rupiah) (INDONESIA)]
+END
+```
+
+Maka parameter yg kita buat sudah bisa dijalankan.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+### Visualisasi Peta Tematik
+
+Visualisasi peta tematik ini digunakan untuk memvisualisasikan data indeks dan indikator di 34 provinsi di Indonesia berdasarkan periode waktu referensi. 
+
+Berikut adalah hasil pembentukan peta tematik pada tableau :
+
+* Worksheet PETA1 merupakan visualisasi Kondisi Ketenagakerjaan 34 Provinsi Indonesia berdasarkan Indeks dan Periode.
+
+<p align="center"><img src="images/peta.png" alt="Logo" width="750"></p>
+
+* Worksheet PETA2 merupakan visualisasi Kondisi Ketenagakerjaan 34 Provinsi Indonesia berdasarkan Indikator Penyusun Indeks dan Periode.
+
+<p align="center"><img src="images/peta2.png" alt="Logo" width="750"></p>
+
+Visualisasi data ini dibuat dinamis, sehingga pengguna dapat menentukan periode waktu referansi dan indeks/indikator yang ingin ditampilkan. Untuk dapat melakukan aksi tersebut, langkahnya adalah dengan membuat parameter baru sebagai berikut :
+
+<img src="images/pilih-periode.png" alt="Logo" width="300">
+<img src="images/pilih-indeks.png" alt="Logo" width="300">
+<img src="images/pilih-indikator.png" alt="Logo" width="300">
+
+Selanjutnya tampilkan parameter. Untuk bisa melaukan aksi seperti apabila di klik maka muncul visualisasi data yang diinginkan maka kita melakukan Create Calculate Field dengan code sebagai berikut :
+
+* Pilih Indeks dan Periode
+  
+```
+IF [Pilih Indeks] = "Indeks Kesempatan Kerja" AND [Pilih Periode] = "Agustus 2019" THEN [Indeks Kesempatan Kerja Agustus2019]
+ELSEIF  [Pilih Indeks] = "Indeks Kesempatan Kerja" AND [Pilih Periode] = "Februari 2020" THEN [Indeks Kesempatan Kerja Februari2020]
+ELSEIF  [Pilih Indeks] = "Indeks Kesempatan Kerja" AND [Pilih Periode] = "Agustus 2020" THEN [Indeks Kesempatan Kerja Agustus2020]
+ELSEIF  [Pilih Indeks] = "Indeks Kesempatan Kerja" AND [Pilih Periode] = "Februari 2021" THEN [Indeks Kesempatan Kerja Februari2021]
+ELSEIF  [Pilih Indeks] = "Indeks Kualitas Pekerjaan" AND [Pilih Periode] = "Agustus 2019" THEN [Indeks Kualitas Pekerjaan Agustus2019]
+ELSEIF  [Pilih Indeks] = "Indeks Kualitas Pekerjaan" AND [Pilih Periode] = "Februari 2020" THEN [Indeks Kualitas Pekerjaan Februari2020]
+ELSEIF  [Pilih Indeks] = "Indeks Kualitas Pekerjaan" AND [Pilih Periode] = "Agustus 2020" THEN [Indeks Kualitas Pekerjaan Agustus2020]
+ELSEIF  [Pilih Indeks] = "Indeks Kualitas Pekerjaan" AND [Pilih Periode] = "Februari 2021" THEN [Indeks Kualitas Pekerjaan Februari2021]
+ELSEIF  [Pilih Indeks] = "Indeks Kompensasi Tenaga Kerja" AND [Pilih Periode] = "Agustus 2019" THEN [Indeks Kompensasi Tenaga Kerja Agustus2019]
+ELSEIF  [Pilih Indeks] = "Indeks Kompensasi Tenaga Kerja" AND [Pilih Periode] = "Februari 2020" THEN [Indeks Kompensasi Tenaga Kerja Februari2020]
+ELSEIF  [Pilih Indeks] = "Indeks Kompensasi Tenaga Kerja" AND [Pilih Periode] = "Agustus 2020" THEN [Indeks Kompensasi Tenaga Kerja Agustus2020]
+ELSEIF  [Pilih Indeks] = "Indeks Kompensasi Tenaga Kerja" AND [Pilih Periode] = "Februari 2021" THEN [Indeks Kompensasi Tenaga Kerja Februari2021]
+END
+```
+
+* Pilih Indikator Penyusun Indeks dan Periode
+  
+```
+IF [Pilih Indikator] = "Tingkat Partisipasi Angkatan Kerja (TPAK)" AND [Pilih Periode] = "Agustus 2019" THEN [Tingkat Partisipasi Angkatan Kerja (TPAK) Agustus2019]
+ELSEIF  [Pilih Indikator] = "Tingkat Partisipasi Angkatan Kerja (TPAK)" AND [Pilih Periode] = "Februari 2020" THEN [Tingkat Partisipasi Angkatan Kerja (TPAK) Februari2020]
+ELSEIF  [Pilih Indikator] = "Tingkat Partisipasi Angkatan Kerja (TPAK)" AND [Pilih Periode] = "Agustus 2020" THEN [Tingkat Partisipasi Angkatan Kerja (TPAK) Agustus2020]
+ELSEIF  [Pilih Indikator] = "Tingkat Partisipasi Angkatan Kerja (TPAK)" AND [Pilih Periode] = "Februari 2021" THEN [Tingkat Partisipasi Angkatan Kerja (TPAK) Februari2021]
+ELSEIF  [Pilih Indikator] = "Tingkat Kesempatan Kerja (TKK)" AND [Pilih Periode] = "Agustus 2019" THEN [Tingkat Kesempatan Kerja (TKK) Agustus2019]
+ELSEIF  [Pilih Indikator] = "Tingkat Kesempatan Kerja (TKK)" AND [Pilih Periode] = "Februari 2020" THEN [Tingkat Kesempatan Kerja (TKK) Februari2020]
+ELSEIF  [Pilih Indikator] = "Tingkat Kesempatan Kerja (TKK)" AND [Pilih Periode] = "Agustus 2020" THEN [Tingkat Kesempatan Kerja (TKK) Agustus2020]
+ELSEIF  [Pilih Indikator] = "Tingkat Kesempatan Kerja (TKK)" AND [Pilih Periode] = "Februari 2021" THEN [Tingkat Kesempatan Kerja (TKK) Februari2021]
+ELSEIF  [Pilih Indikator] = "Rasio Penduduk Bekerja Terhadap Penduduk Usia Kerja" AND [Pilih Periode] = "Agustus 2019" THEN [Rasio Penduduk Bekerja Terhadap Penduduk Usia Kerja Agustus2019]
+ELSEIF  [Pilih Indikator] = "Rasio Penduduk Bekerja Terhadap Penduduk Usia Kerja" AND [Pilih Periode] = "Februari 2020" THEN [Rasio Penduduk Bekerja Terhadap Penduduk Usia Kerja Februari2020]
+ELSEIF  [Pilih Indikator] = "Rasio Penduduk Bekerja Terhadap Penduduk Usia Kerja" AND [Pilih Periode] = "Agustus 2020" THEN [Rasio Penduduk Bekerja Terhadap Penduduk Usia Kerja Agustus2020]
+ELSEIF  [Pilih Indikator] = "Rasio Penduduk Bekerja Terhadap Penduduk Usia Kerja" AND [Pilih Periode] = "Februari 2021" THEN [Rasio Penduduk Bekerja Terhadap Penduduk Usia Kerja Februari2021]
+ELSEIF  [Pilih Indikator] = "Persentase Pekerja Sektor Industri" AND [Pilih Periode] = "Agustus 2019" THEN [Persentase Pekerja Sektor Industri Agustus2019]
+ELSEIF  [Pilih Indikator] = "Persentase Pekerja Sektor Industri" AND [Pilih Periode] = "Februari 2020" THEN [Persentase Pekerja Sektor Industri Februari2020]
+ELSEIF  [Pilih Indikator] = "Persentase Pekerja Sektor Industri" AND [Pilih Periode] = "Agustus 2020" THEN [Persentase Pekerja Sektor Industri Agustus2020]
+ELSEIF  [Pilih Indikator] = "Persentase Pekerja Sektor Industri" AND [Pilih Periode] = "Februari 2021" THEN [Persentase Pekerja Sektor Industri Februari2021]
+ELSEIF  [Pilih Indikator] = "Persentase Pekerja Full Time" AND [Pilih Periode] = "Agustus 2019" THEN [Persentase Pekerja Full Time Agustus2019]
+ELSEIF  [Pilih Indikator] = "Persentase Pekerja Full Time" AND [Pilih Periode] = "Februari 2020" THEN [Persentase Pekerja Full Time Februari2020]
+ELSEIF  [Pilih Indikator] = "Persentase Pekerja Full Time" AND [Pilih Periode] = "Agustus 2020" THEN [Persentase Pekerja Full Time Agustus2020]
+ELSEIF  [Pilih Indikator] = "Persentase Pekerja Full Time" AND [Pilih Periode] = "Februari 2021" THEN [Persentase Pekerja Full Time Februari2021]
+ELSEIF  [Pilih Indikator] = "Persentase Pekerja dengan Jam Kerja Normal (35-48 Jam Seminggu)" AND [Pilih Periode] = "Agustus 2019" THEN [Persentase Pekerja dengan Jam Kerja Normal (35-48 Jam Seminggu) Agustus2019]
+ELSEIF  [Pilih Indikator] = "Persentase Pekerja dengan Jam Kerja Normal (35-48 Jam Seminggu)" AND [Pilih Periode] = "Februari 2020" THEN [Persentase Pekerja dengan Jam Kerja Normal (35-48 Jam Seminggu) Februari2020]
+ELSEIF  [Pilih Indikator] = "Persentase Pekerja dengan Jam Kerja Normal (35-48 Jam Seminggu)" AND [Pilih Periode] = "Agustus 2020" THEN [Persentase Pekerja dengan Jam Kerja Normal (35-48 Jam Seminggu) Agustus2020]
+ELSEIF  [Pilih Indikator] = "Persentase Pekerja dengan Jam Kerja Normal (35-48 Jam Seminggu)" AND [Pilih Periode] = "Februari 2021" THEN [Persentase Pekerja dengan Jam Kerja Normal (35-48 Jam Seminggu) Februari2021]
+ELSEIF  [Pilih Indikator] = "Persentase Pekerja Formal" AND [Pilih Periode] = "Agustus 2019" THEN [Persentase Pekerja Formal Agustus2019]
+ELSEIF  [Pilih Indikator] = "Persentase Pekerja Formal" AND [Pilih Periode] = "Februari 2020" THEN [Persentase Pekerja Formal Februari2020]
+ELSEIF  [Pilih Indikator] = "Persentase Pekerja Formal" AND [Pilih Periode] = "Agustus 2020" THEN [Persentase Pekerja Formal Agustus2020]
+ELSEIF  [Pilih Indikator] = "Persentase Pekerja Formal" AND [Pilih Periode] = "Februari 2021" THEN [Persentase Pekerja Formal Februari2021]
+ELSEIF  [Pilih Indikator] = "Rata-Rata Upah Pekerja/ Buruh/Karyawan (Ribu Rupiah)" AND [Pilih Periode] = "Agustus 2019" THEN [Rata-Rata Upah Pekerja/ Buruh/Karyawan (Ribu Rupiah) Agustus2019]
+ELSEIF  [Pilih Indikator] = "Rata-Rata Upah Pekerja/ Buruh/Karyawan (Ribu Rupiah)" AND [Pilih Periode] = "Februari 2020" THEN [Rata-Rata Upah Pekerja/ Buruh/Karyawan (Ribu Rupiah) Februari2020]
+ELSEIF  [Pilih Indikator] = "Rata-Rata Upah Pekerja/ Buruh/Karyawan (Ribu Rupiah)" AND [Pilih Periode] = "Agustus 2020" THEN [Rata-Rata Upah Pekerja/ Buruh/Karyawan (Ribu Rupiah) Agustus2020]
+ELSEIF  [Pilih Indikator] = "Rata-Rata Upah Pekerja/ Buruh/Karyawan (Ribu Rupiah)" AND [Pilih Periode] = "Februari 2021" THEN [Rata-Rata Upah Pekerja/ Buruh/Karyawan (Ribu Rupiah) Februari2021]
+ELSEIF  [Pilih Indikator] = "Rata-Rata Pendapatan Penduduk yang Berusaha Sendiri (Ribu Rupiah)" AND [Pilih Periode] = "Agustus 2019" THEN [Rata-Rata Pendapatan Penduduk yang Berusaha Sendiri (Ribu Rupiah) Agustus2019]
+ELSEIF  [Pilih Indikator] = "Rata-Rata Pendapatan Penduduk yang Berusaha Sendiri (Ribu Rupiah)" AND [Pilih Periode] = "Februari 2020" THEN [Rata-Rata Pendapatan Penduduk yang Berusaha Sendiri (Ribu Rupiah) Februari2020]
+ELSEIF  [Pilih Indikator] = "Rata-Rata Pendapatan Penduduk yang Berusaha Sendiri (Ribu Rupiah)" AND [Pilih Periode] = "Agustus 2020" THEN [Rata-Rata Pendapatan Penduduk yang Berusaha Sendiri (Ribu Rupiah) Agustus2020]
+ELSEIF  [Pilih Indikator] = "Rata-Rata Pendapatan Penduduk yang Berusaha Sendiri (Ribu Rupiah)" AND [Pilih Periode] = "Februari 2021" THEN [Rata-Rata Pendapatan Penduduk yang Berusaha Sendiri (Ribu Rupiah) Februari2021]
+ELSEIF  [Pilih Indikator] = "Rata-Rata Pendapatan Pekerja Bebas (Ribu Rupiah)" AND [Pilih Periode] = "Agustus 2019" THEN [Rata-Rata Pendapatan Pekerja Bebas (Ribu Rupiah) Agustus2019]
+ELSEIF  [Pilih Indikator] = "Rata-Rata Pendapatan Pekerja Bebas (Ribu Rupiah)" AND [Pilih Periode] = "Februari 2020" THEN [Rata-Rata Pendapatan Pekerja Bebas (Ribu Rupiah) Februari2020]
+ELSEIF  [Pilih Indikator] = "Rata-Rata Pendapatan Pekerja Bebas (Ribu Rupiah)" AND [Pilih Periode] = "Agustus 2020" THEN [Rata-Rata Pendapatan Pekerja Bebas (Ribu Rupiah) Agustus2020]
+ELSEIF  [Pilih Indikator] = "Rata-Rata Pendapatan Pekerja Bebas (Ribu Rupiah)" AND [Pilih Periode] = "Februari 2021" THEN [Rata-Rata Pendapatan Pekerja Bebas (Ribu Rupiah) Februari2021]
+END
+```
+
+Maka parameter yg kita buat sudah bisa dijalankan.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+### Tampilan Dashboard
+
+Berikut adalah tampilan dashboard yang telah dibuat :
+
+<p align="center"><img src="images/dashboard.png" alt="Logo" width="750"></p>
+
+Dashboard tersebut dibuat dengan ukuran 1000px x 500px disesuaikan dengan ukuran pada halaman website. Dashboard tersebut terdiri dari empat visualisasi yang telah dibuat yakni LINE1, LINE2, PETA1, dan PETA2. Tidak lupa ditampilkan pula parameternya yaitu pilih periode, pilih indeks, dan pilih indikator. Selain itu juga ditampilkan legenda dari peta tematiknya.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+### Tableau Public
+
+Langkah selanjutnya adalah menyimpan workbook pada tableau public. Dashboard tersebut dapat diakses melalui link berikut : https://public.tableau.com/views/KondisiKetenagakerjaanIndonesiaSelamaCOVID-19/KondisiKetenagakerjaanIndonesiaPadaMasaPandemiCOVID-19?:language=en-US&:display_count=n&:origin=viz_share_link
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+### Embed to Website
+
+Kemudian kita tanamkan atau _embed_ dashboard visualisasi dari tableau ke dalam website kita. Dengan klik `share` kemudian _copy_ `embed code` dan _paste_ ke dalam file html yang dibuat.
+
+<p align="center"><img src="images/embed.png" alt="Logo" width="300"></p>
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 
 
 
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Dinda Fahrani - dindafahrani01@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+Project Link: [https://github.com/DindaFahrani/dokumentasi-visdat](https://github.com/DindaFahrani/dokumentasi-visdat)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
